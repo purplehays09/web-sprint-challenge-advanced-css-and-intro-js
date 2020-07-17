@@ -344,27 +344,35 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */){
+// function getHTML(array){
+//   for(let x in array){
+    
+//     document.getElementById('extra').innerHTML = `
+//     <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/starry-night-by-vincent-van-gogh-vincent-van-gogh.jpg"/>
+//     <a href = ${array[x].wikipedia}> ${array[x].name}</a>
+//     <div class="bio">${array[x].bio}  
+    
+//     `
 
-    /* Code here */
+//   }
 
-  }
+// }
 
+// getHTML(artists)
 
 /* STRETCH 2: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
 function randomize(array){
-  let newArray = [];
   for(let i = 0;i<array.length;i++){
     array[i].id = Math.floor(Math.random() * (array.length));
-    array.sort((a,b) => {
-      if (a.id > b.id){
-        return 1;
-      }else{
-        return -1;
-      }
-    })
   }
+  array.sort((a,b) => {
+    if (a.id > b.id){
+      return 1;
+    }else{
+      return -1;
+    }
+  })
 }
 
 
